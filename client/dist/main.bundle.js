@@ -310,7 +310,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var FormComponent = /** @class */ (function () {
     function FormComponent(commentService) {
         this.commentService = commentService;
-        // to update existing comment list
+        // When a new comment will be created, send an event to the parent
+        // to refresh its comment list.
         this.newCommentEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
         this.comment = {};
     }
@@ -322,8 +323,7 @@ var FormComponent = /** @class */ (function () {
         var _this = this;
         this.commentService.addComment(this.comment)
             .subscribe(function (comment) {
-            // emit to update existing list by the parent component
-            _this.newCommentEvent.emit(); // after comment will be created.
+            _this.newCommentEvent.emit();
             newCommentForm.reset(); // reset the form
         });
     };
@@ -397,7 +397,7 @@ var EditCommentComponent = /** @class */ (function () {
     };
     //
     // This method passes user id as a parameter
-    // to the commentService getComment() method.
+    // to the commentService to get the comment.
     //
     EditCommentComponent.prototype.getComment = function () {
         var _this = this;
@@ -693,7 +693,7 @@ var YosemitePageComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: true,
-    apiurl: 'http://localhost:8080'
+    apiurl: 'http://45.55.234.209:8080'
 };
 
 
@@ -706,7 +706,7 @@ var environment = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: true,
-    apiurl: 'http://localhost:8080'
+    apiurl: 'http://45.55.234.209:8080'
 };
 
 

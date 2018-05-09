@@ -30,14 +30,16 @@ app.use(bodyparser.urlencoded({extended: true}));
 
 
 // Set up routes.
-app.use(express.static('./public'));    // use static files from a public folder
 app.use('/api', jsonParser, api);
 app.use('/', express.static('../client/dist'));
 app.use('/yosemite', express.static('../client/dist'));
+app.use(express.static('./public'));    // use static files from a public folder
 
-// Handle http 404 response.
+
+// Handle http 404 response
 app.use((req, res, next)=>{
-  res.status(404).redirect('./public/404Page.html');
+  res.status(404).redirect('/404page.html');
+  next();
 });
 
 module.exports = app;

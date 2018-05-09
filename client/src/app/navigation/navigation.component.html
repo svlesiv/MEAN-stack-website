@@ -1,0 +1,8 @@
+<nav role="navigation">
+	<ul>
+		
+		<!-- without [routerLinkActiveOptions]="{ exact: true }" - base link "/" is always active -->
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="" class = "nav">Home</a></li>
+		<li [routerLinkActive]="['active']"><a routerLink="yosemite" class="nav">Yosemite</a></li>
+	</ul>
+</nav>

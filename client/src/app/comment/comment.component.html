@@ -1,0 +1,13 @@
+<div>
+  <p>{{comment.username}}</p>
+  <p>{{comment.usercomment}}</p>
+
+  <!-- date, which comes from DB can be formated with Angular DatePipe -->
+  <p class="date">{{comment.createdAt | date:'fullDate'}}</p>
+
+  <a routerLink="comment/{{comment._id}}" class="link-button">Edit</a>
+  <button class="small-button" title="delete-comment"
+    (click)="deleteComment()">Delete</button>
+
+  <p class="separator">_________________________</p>
+</div>

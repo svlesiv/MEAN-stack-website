@@ -1,0 +1,68 @@
+form {
+	width: 30vw;
+	margin:0 0 4em 0;
+	padding:0;
+}
+
+fieldset {
+	padding: 1em;
+	margin:0;
+	border: 1px solid hsl(27, 50%, 52%);
+}
+
+legend {
+	font-size: 1.5em;
+	color: hsl(27, 50%, 52%);
+}
+
+label {
+	font-family: "Roboto", sans-serif;
+	color:  hsl(27, 50%, 52%);
+	display: block;
+	padding: 0;
+	margin:0;
+	font-size: 1.2em;
+}
+
+input, textarea {
+	font-family: "Raleway", Arial, Helvetica, sans-serif;
+	display: block;
+	margin-bottom: 1em;
+	width: 15em;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom: 1px solid hsl(27, 50%, 52%);
+	background-color: rgba(15, 15, 15, 1);
+	color:rgba(200, 200, 200, 1);
+}
+
+input + label{
+	margin-top: 1em;
+}
+
+button {
+	margin-top: 0.5em;
+	font-size: 1.2em;
+	background:rgba(15, 15, 15, 1);
+	color:hsl(27, 50%, 52%);
+	border:1px solid hsl(27, 50%, 52%);
+	border-radius: 2px;
+	padding: 0.6em 1.2em;
+	cursor:pointer;
+	transition:all 0.3s ease;
+}
+
+button:hover,
+button:active,
+button:focus {
+	color:rgba(200, 200, 200, 1);
+	border-color: hsl(27, 50%, 52%);
+	border-color: hsl(27, 50%, 52%);
+	box-shadow:0 0 0.8em hsl(27, 50%, 52%);
+  cursor: pointer;
+}
+
+.hint {
+	margin-bottom: 1em;
+}

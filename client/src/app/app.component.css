@@ -1,0 +1,53 @@
+/* general styling */
+header, footer, main {
+	color:rgba(200, 200, 200, 1);
+}
+
+/* layout */
+/* 'autoprefixer: off' removes Angular's warnings related to grid-templates-areas */
+@supports(display: grid){
+	.wrapper{
+		display: grid;
+		/* autoprefixer: off */
+		grid-template-areas: "header"
+												 "main"
+												 "footer";
+		grid-template-columns: minmax(100px, 1fr);
+		grid-template-rows: minmax(80px, max-content) 2fr minmax(80px, max-content);
+	}
+
+	header  {
+		/* autoprefixer: off */
+		grid-area: header;
+	}
+	main {
+		/* autoprefixer: off */
+		grid-area: main;
+	}
+	footer {
+		/* autoprefixer: off */
+		grid-area: footer;
+	}
+
+	@media(min-width:768px){
+		.wrapper{
+			/* autoprefixer: off */
+			grid-template-areas: "header header"
+							 	 						"main main"
+							 	 						"footer footer";
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: minmax(80px, max-content) 2fr minmax(80px, max-content);
+		}
+	}
+
+	@media(min-width:1200px){
+		.wrapper{
+			/* autoprefixer: off */
+			grid-template-areas: "header header header"
+							 	 						"main main main"
+							 	 						"footer footer footer";
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: minmax(80px, max-content) 2fr minmax(80px, max-content);
+		}
+	}
+}

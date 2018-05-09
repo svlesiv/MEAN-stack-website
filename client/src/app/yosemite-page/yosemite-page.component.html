@@ -1,0 +1,38 @@
+<!-- https://www.npmjs.com/package/ng-simple-slideshow -->
+<slideshow
+      [imageUrls]="imageSources"
+      [height]="'80%'"
+      [autoPlay]=true
+      [showDots]=true
+      [dotColor]="'#000'"
+      [showCaptions]=true >
+</slideshow>
+
+<div class="wrapper">
+  <article>
+    <h1>Yosemite National Park</h1>
+    <blockquote cite="https://www.nps.gov/yose/index.htm">
+        Yosemite National Park is in California’s Sierra Nevada mountains.
+        It’s famed for its giant, ancient sequoia trees, and for Tunnel View,
+        the iconic vista of towering Bridalveil Fall and the granite cliffs of
+        El Capitan and Half Dome. In Yosemite Village are shops, restaurants,
+        lodging, the Yosemite Museum and the Ansel Adams Gallery, with prints
+        of the photographer’s renowned black-and-white landscapes of the are.
+        <a href="https://www.nps.gov/yose/index.htm">Yosemite NP website.</a>
+    </blockquote>
+  </article>
+
+    <!-- call method listComments() when newCommentEvent happened -->
+	 <app-form (newCommentEvent) = "listComments()"></app-form>
+
+    <div class="comments-wrapper">
+      <h2 class="comment-title">Comments</h2>
+
+      <!-- iterate over component -->
+      <app-comment
+        *ngFor='let comment of comments'
+        [comment]=comment
+        >
+      </app-comment>
+		</div>
+	</div>

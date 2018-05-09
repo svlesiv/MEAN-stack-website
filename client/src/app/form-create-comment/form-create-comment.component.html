@@ -1,0 +1,30 @@
+<form #newCommentForm="ngForm" (ngSubmit)="save(newCommentForm)">
+  	<fieldset>
+    	  <legend>Post your comment</legend>
+
+        <!-- username field -->
+    		<label for="name">Name</label>
+    		<input required minlength="2" #usernameEl="ngModel" type="text" name="name"
+               placeholder="enter your name" [(ngModel)]="comment.username">
+
+        <div *ngIf="usernameEl.invalid && (usernameEl.dirty || usernameEl.touched)">
+         <span *ngIf="usernameEl.errors.minlength" class="hint">
+           Name must be at least 2 characters long.
+         </span>
+        </div>
+
+
+        <!-- usercomment field -->
+    		<label for="comment">Your comment</label>
+    		<textarea required minlength="4"  #usercommentEl="ngModel" rows="4" name="comment"
+                  placeholder="enter your comment" [(ngModel)]="comment.usercomment"></textarea>
+
+        <div *ngIf="usercommentEl.invalid && (usercommentEl.dirty || usercommentEl.touched)">
+         <span *ngIf="usercommentEl.errors.minlength" class="hint">
+           Comment must be at least 4 characters long.
+         </span>
+        </div>
+
+        <button type="submit" [disabled]="!newCommentForm.valid">Submit</button>
+  	</fieldset>
+</form>

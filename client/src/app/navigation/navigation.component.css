@@ -1,0 +1,51 @@
+nav {
+	padding-left: 1em;
+	font-size: 1.3em;
+	font-weight: bold;
+	width: 80%;
+	float: left;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-align: left;
+}
+nav li {
+	display: inline;
+	padding-right: 3em;
+}
+nav a {
+	display: inline-block;
+	text-decoration: none;
+	font-family: "Raleway", Arial, Helvetica, sans-serif;
+	font-size: 1.5rem;
+	color:rgba(200, 200, 200, 1);
+  position: relative;
+	transition: all 0.4s;
+}
+nav a:hover {
+	color:hsl(27, 50%, 52%);
+	cursor: pointer;
+}
+
+nav .active a{
+    color: hsl(27, 50%, 52%);
+}
+
+/*nav link transitions*/
+nav a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid hsl(27, 50%, 52%);
+  transition: all 0.4s;
+}
+nav a:hover:after {
+  width: 100%;
+}

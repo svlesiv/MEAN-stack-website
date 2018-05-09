@@ -37,7 +37,7 @@ app.use('/yosemite', express.static('../client/dist'));
 
 // Handle http 404 response.
 app.use((req, res, next)=>{
-  res.status(404).redirect('/404Page.html');
+  res.status(404).redirect('./public/404Page.html');
 });
 
 module.exports = app;

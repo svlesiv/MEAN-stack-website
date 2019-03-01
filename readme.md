@@ -7,14 +7,14 @@ Additional features: gallery, dynamic title header, active link class for naviga
 
 
 ## Structure
-  * Express
-    Express application structure with start scripts, view/route/model directories, mongo/mongoose, a data service class, etc.
-    A REST API for all four CRUD operations.  
-    The application using a static route in Express. In other words, your server code delivered both your Angular code and your Express app.
-  * Angular    
-    A router with at least two views/pages.
-    At least two CRUD operations must be supported via Angular using REST API.
-    REST API access contained in a data service class.
+* Express
+  Express application structure with start scripts, view/route/model directories, mongo/mongoose, a data service class, etc.
+  A REST API for all four CRUD operations.  
+  The application using a static route in Express. In other words, your server code delivered both your Angular code and your Express app.
+* Angular    
+  A router with at least two views/pages.
+  At least two CRUD operations must be supported via Angular using REST API.
+  REST API access contained in a data service class.
 
 ## Functionality
 Application provides the ability to do all four CRUD operations that lets user(s) manage information stored in the database. The application allows user  to retrieve a resource(s), create a new resource, update existing ones, and delete them (all four CRUD operations).

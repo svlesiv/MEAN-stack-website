@@ -4,7 +4,6 @@ const express  = require('express');
 const api      = require('../controllers/apiController');
 const router   = express.Router();
 
-
 // Set up preflight middleware.
 router.use((req, res, next) => {
   res.set({

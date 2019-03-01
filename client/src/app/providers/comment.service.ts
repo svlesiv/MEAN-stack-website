@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment.prod';
 import { Comment } from '../../models/comment.model';
 
 const httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
 @Injectable()
@@ -23,27 +23,26 @@ export class CommentService {
 
   // Create comment.
   addComment(comment: Comment): Observable<Comment> {
-      return this.http.post<Comment>(this.commentsUrl + '/api/create', comment, httpOptions);
-    }
+    return this.http.post<Comment>(this.commentsUrl + '/api/create', comment, httpOptions);
+  }
 
   // Read all comments.
   getComments() : Observable<Comment[]> {
-      return this.http.get<Comment[]>(this.commentsUrl + '/api');
+    return this.http.get<Comment[]>(this.commentsUrl + '/api');
   }
 
   // Read one comment.
   getComment(id): Observable<Comment> {
-      return this.http.get<Comment>(this.commentsUrl + '/api/' + id);
+    return this.http.get<Comment>(this.commentsUrl + '/api/' + id);
   }
 
   // Update comment.
    updateComment(id, comment: Comment): Observable<any>{
-      return this.http.put(this.commentsUrl + '/api/update/' + id, comment, httpOptions);
+    return this.http.put(this.commentsUrl + '/api/update/' + id, comment, httpOptions);
    }
 
    // Delete comment.
    deleteComment(id: number){
-      return this.http.delete(this.commentsUrl + '/api/delete/' + id);
+    return this.http.delete(this.commentsUrl + '/api/delete/' + id);
    }
-
 }

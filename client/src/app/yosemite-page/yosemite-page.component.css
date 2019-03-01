@@ -1,74 +1,74 @@
 /* gallery component overwrittes */
 ::ng-deep .slideshow-container {
-	position: absolute !important;
-	z-index: -1;
+  position: absolute !important;
+  z-index: -1;
 }
 
 /* general styling */
 .wrapper{
-	position:absolute;
-	margin-top: 90vh;
-	padding-left: 3em;
-	color:rgba(200, 200, 200, 1);
+  position:absolute;
+  margin-top: 90vh;
+  padding-left: 3em;
+  color:rgba(200, 200, 200, 1);
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 p, blockquote {
-	font-family: "Raleway", Arial, Helvetica, sans-serif;
-	font-size: 1rem;
-	color: rgba(200, 200, 200, 1);
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: rgba(200, 200, 200, 1);
 }
 h2 {
-	font-size: 1.3em;
+  font-size: 1.3em;
 }
 *:focus {
-	outline: none;
+  outline: none;
     border-color: hsl(27, 50%, 52%);
     box-shadow: 0 0 3px hsl(27, 50%, 52%);
 }
 .comment-title{
-	color:hsl(27, 50%, 52%);;
+  color:hsl(27, 50%, 52%);;
 }
 
 blockquote {
-	max-width: 60vw;
-	padding: 0;
-	margin: 0;
-	margin-bottom: 2em;
+  max-width: 60vw;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2em;
 }
 
 blockquote {
-	      column-width: 350px;
-	-webkit-column-gap: 30px;
-	   -moz-column-gap: 30px;
-	        column-gap: 30px;
-	-webkit-column-rule: 1px solid hsl(27, 50%, 52%);
-	   -moz-column-rule: 1px solid hsl(27, 50%, 52%);
-	        column-rule: 1px solid hsl(27, 50%, 52%);
+        column-width: 350px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-column-rule: 1px solid hsl(27, 50%, 52%);
+     -moz-column-rule: 1px solid hsl(27, 50%, 52%);
+          column-rule: 1px solid hsl(27, 50%, 52%);
 }
 
 article h1 {
-	color: hsl(27, 50%, 52%);
-	font-size: 1.5em;
+  color: hsl(27, 50%, 52%);
+  font-size: 1.5em;
 }
 
 /*link style*/
 a[href*="https"]{
-	padding-right: 20px;
+  padding-right: 20px;
 }
 a:not([class="nav"]):link,
 a:not([class="nav"]):focus{
-	text-decoration: none;
-	color: hsl(27, 50%, 52%);
+  text-decoration: none;
+  color: hsl(27, 50%, 52%);
 }
 a:not([class="nav"]):visited{
-	text-decoration: none;
-	text-decoration-skip: ink;
-	color: hsl(27, 40%, 52%);
+  text-decoration: none;
+  text-decoration-skip: ink;
+  color: hsl(27, 40%, 52%);
 }
 a:not([class="nav"]):hover,
 a:not([class="nav"]):active {
-	color: hsl(27, 60%, 52%);
-	text-decoration: underline;
+  color: hsl(27, 60%, 52%);
+  text-decoration: underline;
 }

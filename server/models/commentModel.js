@@ -6,10 +6,10 @@ var Schema = mongoose.Schema;
 
 // Create a new schema for the app.
 var schema = new Schema({
-    username: String,
-    usercomment: String,
-    createdAt: Date
-  });
+  username: String,
+  usercomment: String,
+  createdAt: Date
+});
 
 // Assign current date to createdAt.
 schema.pre('save', function(next){

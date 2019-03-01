@@ -1,35 +1,35 @@
 <div *ngIf="comment">
 
-	<form #editCommentForm="ngForm" (ngSubmit)="updateComment(editCommentForm.value)">
-		 <fieldset>
-				 <legend>Post your comment</legend>
+  <form #editCommentForm="ngForm" (ngSubmit)="updateComment(editCommentForm.value)">
+     <fieldset>
+         <legend>Post your comment</legend>
 
-				 <!-- username field -->
-				 <label for="name">Name</label>
-				 <input required minlength="2" #usernameEl="ngModel" type="text"  name="usernameField"
-				 				placeholder="enter your name" [ngModel]="comment.username">
+         <!-- username field -->
+         <label for="name">Name</label>
+         <input required minlength="2" #usernameEl="ngModel" type="text"  name="usernameField"
+                 placeholder="enter your name" [ngModel]="comment.username">
 
-					<div *ngIf="usernameEl.invalid && (usernameEl.dirty || usernameEl.touched)">
-					 <div *ngIf="usernameEl.errors.minlength">
-						 Name must be at least 2 characters long.
-					 </div>
-					</div>
+          <div *ngIf="usernameEl.invalid && (usernameEl.dirty || usernameEl.touched)">
+           <div *ngIf="usernameEl.errors.minlength">
+             Name must be at least 2 characters long.
+           </div>
+          </div>
 
 
-					<!-- usercomment field -->
-				 <label for="comment" id="commentLabel">Your comment</label>
-				 <textarea required minlength="4"  #usercommentEl="ngModel" rows="4" name="usercommentField"
-				 					placeholder="enter your comment" [ngModel]="comment.usercomment"></textarea>
+          <!-- usercomment field -->
+         <label for="comment" id="commentLabel">Your comment</label>
+         <textarea required minlength="4"  #usercommentEl="ngModel" rows="4" name="usercommentField"
+                   placeholder="enter your comment" [ngModel]="comment.usercomment"></textarea>
 
-					<div *ngIf="usercommentEl.invalid && (usercommentEl.dirty || usercommentEl.touched)">
-					 <div *ngIf="usercommentEl.errors.minlength">
-						 Comment must be at least 4 characters long.
-					 </div>
-					</div>
+          <div *ngIf="usercommentEl.invalid && (usercommentEl.dirty || usercommentEl.touched)">
+           <div *ngIf="usercommentEl.errors.minlength">
+             Comment must be at least 4 characters long.
+           </div>
+          </div>
 
-					<button type="submit" [disabled]="!editCommentForm.valid">Update</button>
-		 </fieldset>
-	</form>
+          <button type="submit" [disabled]="!editCommentForm.valid">Update</button>
+     </fieldset>
+  </form>
 
-	<button (click)="goBack()" class="arrow-button">&lArr;</button>
+  <button (click)="goBack()" class="arrow-button">&lArr;</button>
 </div>
